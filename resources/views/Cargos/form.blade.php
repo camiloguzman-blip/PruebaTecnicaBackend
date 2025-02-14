@@ -1,4 +1,8 @@
-
+<div class="row justify-content-center">
+<div class="col-md-8">
+<div class="card-text mb-3">
+<div class="card-body">
+    
 <h1>{{ $mod }} cargo </h1>
 
 @if(count($errors)>0)
@@ -60,6 +64,10 @@
     </select>
 </div>
 
-<input class="btn btn-secondary" type="submit" value="{{ $mod }} datos">
+<input class="btn btn-primary" type="submit" value="{{ $mod }} datos">
 <a href="{{ url('Cargos/') }}" class="btn btn-dark" > Regresar </a>
 <br>
+</div>
+</div>
+</div>
+</div>

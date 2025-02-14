@@ -1,5 +1,10 @@
+<div class="row justify-content-center">
+<div class="col-md-8">
+<div class="card-text mb-3">
+<div class="card-body">
+
 <h1>{{ $mod }} Empleado</h1>
-<br>
+
 
 @if(count($errors)>0)
 
@@ -53,3 +58,8 @@
 <a class="btn btn-dark" href="{{ url('Empleados/')}}">Volver</a>
 
 <br>
+
+</div>
+</div>
+</div>
+</div>

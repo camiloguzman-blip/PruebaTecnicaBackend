@@ -19,9 +19,9 @@
 <br>
 <div class="card text-center">
 <div class="card-header">
-    Lista de Cargos
-  </div>
-<table class="table table-striped table-hover">
+Lista de Cargos
+</div>
+<table class="table table-striped table-hover active">
     <thead>
         <tr>
             <th>Numero</th>
@@ -42,11 +42,11 @@
             <td>{{ $Cargos->Empleados->Nombres }}</td>
             <td>{{ $Cargos->Empleados->Apellidos }}</td>
             <td>{{ $Cargos->Empleados->Identificacion }}</td>
-            <th>{{ $Cargos->Area }}</th>
-            <th>{{ $Cargos->Cargos }}</th>
-            <th>{{ $Cargos->Roles }}</th>
-            <th>{{ $Cargos->Jefe }}</th>
-            <th>
+            <td>{{ $Cargos->Area }}</td>
+            <td>{{ $Cargos->Cargos }}</td>
+            <td>{{ $Cargos->Roles }}</td>
+            <td>{{ $Cargos->Jefe }}</td>
+            <td>
                 
               <a href="{{ url('/Cargos/'.$Cargos->id.'/edit') }}" class="btn btn-secondary">
               Editar
@@ -58,7 +58,7 @@
                 <input class="btn btn-dark" type="submit" onclick="return confirm('¿Está seguro de realizar esta acción?')"value="Borrar">
               </form>
             
-            </th>
+            </td>
         </tr>
         @endforeach
     </tbody>
@@ -66,7 +66,7 @@
 </table>
 <div class="card-footer text-body-secondary">
     
-  </div>
+</div>
 </div>
 </div>
 
