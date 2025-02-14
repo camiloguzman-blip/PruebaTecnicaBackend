@@ -32,9 +32,12 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                    <ul class="nav justify-content-center">
                     <li class="nav-item">
                     <a class="nav-link" href="{{ route('Empleados.index') }}">{{ __('Empleados') }}</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ route('Cargos.index') }}">{{ __('Cargos') }}</a>
                     </li>
                     </ul>
 

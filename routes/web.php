@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadosController;
+use App\Http\Controllers\CargosController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +21,32 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/Empleados', function () {
+    return view('Empleados.index');
+});
+
+Route::get('/Empleados', [EmpleadosController::class, 'index'])->name('Empleados');
+
 Route::resource('Empleados',EmpleadosController::class)->middleware('auth');
+
+Route::get('/Cargos', function () {
+    return view('Cargos.index');
+});
+
+Route::resource('Cargos',CargosController::class)->middleware('auth');
 
 Auth::routes([]);
 
-/*Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/
-Route::get('/home', [EmpleadosController::class, 'index'])->name('home');
+//Route::group(['middleware' => 'auth'], function(){
+//});
 
-Route::group(['middleware' => 'auth'], function(){
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-    Route::get('/', [EmpleadosController::class, 'index'])->name('home');
-});
+//Route::get('/Empleados', [EmpleadosController::class, 'index']);
+//Route::get('/welcome', [EmpleadosController::class, 'index'])->name('welcome');
+//Route::get('/', [EmpleadosController::class, 'index'])->name('welcome');
+
+//Route::get('/Cargos/create', [CargosController::class, 'create']);
+//Route::resource('Cargos',CargosController::class);

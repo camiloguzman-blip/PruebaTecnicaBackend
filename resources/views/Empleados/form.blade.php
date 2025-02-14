@@ -43,6 +43,11 @@
 <input type="text" class="form-control" name="Ciudad_de_nacimiento" value="{{ isset($Empleados->Ciudad_de_nacimiento)?$Empleados->Ciudad_de_nacimiento:'' }}" id="Ciudad_de_nacimiento"> 
 </div>
 
+<div class="mb-3">
+<label for="Departamento">Departamento</label>
+<input type="text" class="form-control" name="Departamento" value="{{ isset($Empleados->Departamento)?$Empleados->Departamento:'' }}" id="Departamento"> 
+</div>
+
 <input class="btn btn-primary" type="submit" value="{{ $mod }} datos">
 
 <a class="btn btn-dark" href="{{ url('Empleados/')}}">Volver</a>

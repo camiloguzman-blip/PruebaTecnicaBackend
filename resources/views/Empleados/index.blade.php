@@ -14,12 +14,17 @@
       </div>
       @endif
 
+<div class="card-header">
 <a href="{{ url('Empleados/create')}}" class="btn btn-primary" >Registrar nuevo empleado</a>
-<br>
-<br>
+</div>
 
-<table class="table table-light">
-    <thead class="thead-light">
+<br>
+<div class="card text-center">
+<div class="card-header">
+    Lista de Empleados
+</div>
+<table class="table table-striped table-hover">
+    <thead>
         <tr>
             <th>Numero</th>
             <th>Nombres</th>
@@ -27,7 +32,8 @@
             <th>Identificacion</th>
             <th>Direccion</th>
             <th>Telefono</th>
-            <th>Ciudad de nacimiento</th>
+            <th>Ciudad</th>
+            <th>Departamento</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -43,6 +49,7 @@
             <td>{{ $Empleados->Direccion }}</td>
             <td>{{ $Empleados->Telefono }}</td>
             <td>{{ $Empleados->Ciudad_de_nacimiento }}</td>
+            <td>{{ $Empleados->Departamento }}</td>
             <td>    
 
             <a href="{{ url('/Empleados/'.$Empleados->id.'/edit') }}" class="btn btn-secondary"> 
@@ -62,6 +69,9 @@
     </tbody>
 
 </table>
-
+<div class="card-footer text-body-secondary">
+    
+</div>
+</div>
 </div>
 @endsection
